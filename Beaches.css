@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+   /* font-family: 'Oswald', sans-serif;*/
+   font-family: 'Oswald', sans-serif;
+}
+
+.header{
+    min-height: 75vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(pictures/beachesback.JPG) ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 90px;
+    animation-name: ima_ani;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes ima_ani{
+    0%{opacity: 0%;}
+    25%{opacity: 0%;}
+    50%{opacity: 0%;}
+    80%{opacity: 0%;}
+}
+.navigationlinks{
+    flex: 1;
+    text-align:right;
+
+}
+
+.navigationlinks {
+    border:solid rgba(0, 255, 213, 0.555);
+    border-style: groove;
+    border-left: transparent;
+    border-top: transparent;
+    border-bottom: transparent;
+    padding:10px;
+    animation-name: navborder_ani;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes navborder_ani{
+    0%{opacity: 0%;}
+    25%{opacity: 0%;}
+    50%{opacity: 0%;}
+    80%{opacity: 0%;}
+}
+
+
+.navigationlinks ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navigationlinks ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.navigationlinks ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    margin-left: 0%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background:linear-gradient(to right,rgb(0, 255, 157),rgb(0, 255, 242),rgb(255, 237, 133)) ;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in-out;
+}
+.navigationlinks ul li a:hover::before{
+    transform:scaleX(1);
+    transform-origin: bottom left;
+}
+.navigationlinks ul li a span::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    margin-left: 0%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background:linear-gradient(to right,rgb(255, 237, 133),rgb(0, 255, 242),rgb(0, 255, 157)) ;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in-out;
+}
+.navigationlinks ul li a span:hover::before{
+    transform:scaleX(1);
+    transform-origin: bottom left;
+}
+.navigationlinks ul li a:hover{
+
+    color:rgb(255, 249, 158);
+    display: block;
+}
+
+.textinfo{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(103, 255, 184, 0.185);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+
+.textinfo h1{
+    font-size: 40px;
+    color:rgb(255, 244, 143) ;
+    animation-name: head_ani;
+    animation-delay: 1s;
+    animation-duration: 2s;
+}
+@keyframes head_ani{
+    25%{color: rgb(2, 206, 138);}
+    50%{color: rgb(0, 247, 255);}
+    75%{color: rgb(255, 244, 143);}
+    25%{font-size: 50px;}
+    50%{font-size: 50px;}
+    75%{font-size: 50px;}
+    
+    
+}
+@media(max-width:1000px){
+    .navigationlinks ul li a{
+        font-size: 15px;
+    }
+    .textinfo h1{
+        font-size: 20px;
+    }
+    @keyframes head_ani{
+        25%{color: rgb(16, 139, 0);}
+        50%{color: rgb(255, 153, 0);}
+        75%{color: rgb(141, 0, 0);}
+        25%{font-size: 35px;}
+        50%{font-size: 35px;}
+        75%{font-size: 35px;}
+        
+    }
+    .textinfo p{
+        font-size: 15px;
+    }
+}
+
+/*---------Beaches-----------*/
+
+.headliner{
+    background-image:linear-gradient(to right, rgb(0, 255, 128),rgb(0, 255, 221),rgb(255, 245, 158));
+    width: 100%;
+    padding: 30px 0px;
+    border-top:solid black 10px;
+}
+
+
+.row{
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(pictures/nilaveli1.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 30px;
+}
+.row2{
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(pictures/kalkudah1.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 30px;
+}
+.row3{
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(pictures/arugambay2.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 30px;
+}
+.Beaches{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+
+}
+.Beaches h1{
+    color: rgb(0, 0, 0);
+    font-size: 65px;
+}
+.Beaches p{
+    font-size: 18px ;
+    margin-bottom: 6%;
+}
+.Beaches h2{
+    text-align: left;
+    font-size: 35px;
+    padding:10px;
+}
+
+.beach_col{
+    background: rgba(255, 255, 255, 0.644);
+    flex-basis: 25%;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+    padding: 20px;
+    box-sizing:border-box ;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.7);
+}
+
+
+.beach_col img{
+    width: 100%;
+    border-radius: 10px;
+    box-sizing:border-box ;
+    transition: 0.5s;
+    margin-top: 2%;
+}
+.beach_col img:hover{
+    width: 100%;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.7);
+}
+.beach_col2{
+    background: rgba(255, 255, 255, 0.644);
+    flex-basis: 49%;
+    border-radius: 10px;
+    text-align: justify;
+    position: relative;
+    padding: 20px;
+
+}
+
+.beach_col3{
+    background: rgba(255, 255, 255, 0.644);
+    flex-basis: 20%;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+    padding: 20px;
+}
+
+
+.beach_col3 img{
+    width: 86%;
+    border-radius: 10px;
+    margin-top: 4%;
+    box-sizing:border-box ;
+    transition: 0.5s;
+}
+.beach_col3 img:hover{
+    width: 100%;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.7);
+}
+.beach_col3 h3{
+    font-size:15px;
+}
+
+.beach_list1{
+    background: rgba(255, 255, 255, 0.644);
+    flex-basis: 48%;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    text-align: left;
+    position: relative;
+    padding: 20px;
+    box-sizing:border-box ;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.7);
+    transition: 1s;
+}
+.beach_list1 h2{
+    color: rgb(255, 236, 172);
+    background: rgba(50, 78, 70, 0);
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight:700 ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.beach_list1 a{
+    margin-left: 5%;
+    text-decoration: none;
+
+}
+.hotel{
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.hotel img{
+    flex-basis: 45%;
+    width: 50%;
+    border-radius: 10px;
+    box-sizing:border-box ;
+    position: relative;
+}
+.hotel p{
+    flex-basis: 47%;
+    width: 100%;
+    position: relative;
+}
+.listback ul{
+    border-radius: 10px;
+    position: relative;
+    background: rgba(0, 255, 179, 0);
+}
+.listback ul li{
+    list-style: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background:linear-gradient(to right, rgb(0, 255, 128),rgb(0, 255, 221),rgb(255, 245, 158));
+    box-shadow: 0 5px 25px rgba(0, 0, 0,.3);
+    transition: transform 0.5s;
+}
+.listback ul li:hover{
+    transform: scale(1.1);
+    z-index: 100;
+    background: rgb(255, 254, 173);
+    box-shadow: 0 5px 25px rgba(0,0,0,.6);
+    color: rgb(0, 0, 0);
+}
+.listback ul li span{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background: rgb(255, 249, 162);
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    transform: translateY(-18px);
+}
+.listback ul li:hover span{
+    background: aquamarine;
+}
+
+
+
+@media(max-width:1000px){
+    .row{
+        flex-direction: column;
+    }
+    .row2{
+        flex-direction: column;
+    }
+    .row3{
+        flex-direction: column;
+    }
+    .Beaches{
+        flex-direction: column;
+    }
+    .beach_col3{
+        display: none;
+    }
+    .beach_list1{
+        flex-direction: column;
+    }
+    .hotel{
+        flex-direction: column;
+    }
+}
+
+/*-------------Footer----------------*/
+
+.container{
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 3px;
+
+}
+.container:hover{
+    background: grey;
+    transition: 1s;
+}
+
+.footer{
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.footerh{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.footerh h2{
+    margin-bottom: 7%;
+}
+.footerh a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    transition: 0.5s;
+}
+
+.footerh a:hover{
+    color: rgb(0, 255, 179);
+    font-size: 20px;
+}   
+@media(max-width:1000px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+
+
